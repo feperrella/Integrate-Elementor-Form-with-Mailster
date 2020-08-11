@@ -1,0 +1,133 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Integrate Elementor Form with Mailster\n"
+"POT-Creation-Date: 2020-08-11 18:50-0300\n"
+"PO-Revision-Date: 2020-08-11 18:50-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: integrate-elementor-form-with-mailster.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#. translators: 1: Plugin name 2: Elementor Pro
+#. translators: 1: Plugin name 2: Mailster - Email Newsletter Plugin for WordPress
+#: includes/class-integrate-elementor-mailster.php:162
+#: includes/class-integrate-elementor-mailster.php:186
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#: includes/class-integrate-elementor-mailster.php:163
+#: includes/class-integrate-elementor-mailster.php:187
+#: includes/class-integrate-elementor-mailster.php:211
+#: includes/class-integrate-elementor-mailster.php:236
+msgid "Integrate Elementor Form With Mailster"
+msgstr ""
+
+#: includes/class-integrate-elementor-mailster.php:164
+msgid "Elementor Pro"
+msgstr ""
+
+#: includes/class-integrate-elementor-mailster.php:188
+msgid "Mailster - Email Newsletter Plugin for WordPress"
+msgstr ""
+
+#. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
+#. translators: 1: Plugin name 2: PHP 3: Required PHP version
+#: includes/class-integrate-elementor-mailster.php:210
+#: includes/class-integrate-elementor-mailster.php:235
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: includes/class-integrate-elementor-mailster.php:212
+msgid "Elementor"
+msgstr ""
+
+#: includes/class-integrate-elementor-mailster.php:237
+msgid "PHP"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:41
+#: includes/class-mailster-action-after-submit.php:56
+msgid "Mailster"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:66
+msgid "Important Note"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:70
+msgid ""
+"<br>For the integration to work you have to rename the IDs for the "
+"respective fields with: \"<b>firstname</b>\", \"<b>lastname</b>\" and "
+"\"<b>email</b>\", the email ID is required."
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:77
+msgid "Mailster List ID"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:80
+msgid ""
+"The list id you want to subscribe a user to, you can type multiple lists "
+"separeted by a comma."
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:87
+msgid "Overwrite"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:89
+#: includes/class-mailster-action-after-submit.php:102
+msgid "Yes"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:90
+#: includes/class-mailster-action-after-submit.php:103
+msgid "No"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:93
+msgid "Overwrite the user with the new information."
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:100
+msgid "Double Opt in"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:106
+msgid "Enable the confirmation email for the newsletter signup."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Integrate Elementor Form with Mailster"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/feperrella/integrate-elementor-mailster"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds Mailster as an Action After Submit in Elementor Pro Forms."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Fernando A. Perrella"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.fapnet.com.br"
+msgstr ""
