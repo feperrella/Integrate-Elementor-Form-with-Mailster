@@ -41,5 +41,5 @@ if ( ! defined( 'INTEGRATE_ELEMENTOR_MAILSTER_PATH' ) ) {
 
 // Include the main Integrate Elementor Form with Mailster class.
 if ( ! class_exists( 'Integrate_Elementor_Form_with_Mailster', false ) ) {
-	include_once dirname( INTEGRATE_ELEMENTOR_MAILSTER_PATH ) . '/includes/class-integrate-elementor-mailster.php';
+	include_once dirname( INTEGRATE_ELEMENTOR_MAILSTER_PATH ) . '/includes/class-integrate-elementor-form-with-mailster.php';
 }
