@@ -39,6 +39,9 @@ Vale lembrar que apenas o campo email é obrigatório.
 
 ## Changelog ##
 
+### 1.1.1 - 2020/09/20 ###
+- Updating the description.
+
 ### 1.1.0 - 2020/09/20 ###
 - Added better Mailster list selection with Select2 (note: review your list settings).
 - Added Maislter Custom Fields.

@@ -6,7 +6,7 @@
  *
  * @package Integrate_Elementor_Form_With_Mailster/Includes/Integrate_Elementor_Form_With_Mailster
  * @since   1.0.0
- * @version 1.1.0
+ * @version 1.1.1
  */
 final class Integrate_Elementor_Form_With_Mailster {
 
@@ -15,7 +15,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.1.0';
+	const VERSION = '1.1.1';
 
 	/**
 	 * Minimum Elementor Version
