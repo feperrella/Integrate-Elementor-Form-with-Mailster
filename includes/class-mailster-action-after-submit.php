@@ -4,7 +4,7 @@
  *
  * @package Integrate_Elementor_Form_with_Mailster/Includes/Mailster_Action_After_Submit
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  * @see     https://developers.elementor.com/custom-form-action/
  *
  * Custom elementor form action after submit to add a subsciber to
@@ -61,23 +61,29 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 		);
 
 		$widget->add_control(
-			'mailster_important_note',
+			'mailster_options',
 			[
-				'label'       => __( 'Important Note', 'integrate-elementor-mailster' ),
-				'label_block' => true,
-				'type'        => \Elementor\Controls_Manager::RAW_HTML,
-				'separator'   => 'before',
-				'raw'         => __( '<br>For the integration to work you have to rename the IDs for the respective fields with: "<b>firstname</b>", "<b>lastname</b>" and "<b>email</b>", the email ID is required.', 'integrate-elementor-mailster' ),
+				'label' => __( 'Mailster Options', 'integrate-elementor-mailster' ),
+				'type'  => \Elementor\Controls_Manager::HEADING,
 			]
 		);
+
+		// Get all Mailster lists.
+		$mailster_lists         = mailster( 'lists' )->get();
+		$mailster_lists_options = [];
+
+		foreach ( $mailster_lists as $list ) :
+			$mailster_lists_options[ $list->ID ] = $list->name;
+		endforeach;
 
 		$widget->add_control(
 			'mailster_list',
 			[
-				'label'       => __( 'Mailster List ID', 'integrate-elementor-mailster' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'separator'   => 'before',
-				'description' => __( 'The list id you want to subscribe a user to, you can type multiple lists separeted by a comma.', 'integrate-elementor-mailster' ),
+				'label'       => __( 'Mailster Lists', 'integrate-elementor-mailster' ),
+				'type'        => \Elementor\Controls_Manager::SELECT2,
+				'multiple'    => true,
+				'label_block' => true,
+				'options'     => $mailster_lists_options,
 			]
 		);
 
@@ -107,6 +113,78 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 			]
 		);
 
+		$widget->add_control(
+			'mailster_customfield',
+			[
+				'label'     => __( 'Mailster Custom Fields', 'integrate-elementor-mailster' ),
+				'type'      => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$maislter_repeater = new \Elementor\Repeater();
+
+		// Get Mailster custom fields.
+		$customfields      = mailster()->get_custom_fields();
+		$customfield_array = [];
+
+		foreach ( $customfields as $id => $data ) :
+			$customfield_array[ $id ] = $data['name'];
+		endforeach;
+
+		$defaultfields_array = [
+			'email'     => __( 'Email', 'integrate-elementor-mailster' ),
+			'firstname' => __( 'Name', 'integrate-elementor-mailster' ),
+			'lastname'  => __( 'Last Name', 'integrate-elementor-mailster' ),
+		];
+
+		// Create options array for repeater field.
+		$options_array = array_merge( $defaultfields_array, $customfield_array );
+
+		$maislter_repeater->add_control(
+			'list_options',
+			[
+				'label'   => __( 'Custom Fields', 'integrate-elementor-mailster' ),
+				'type'    => \Elementor\Controls_Manager::SELECT,
+				'options' => $options_array,
+			]
+		);
+
+		$maislter_repeater->add_control(
+			'list_form_id',
+			[
+				'label'       => __( 'Field ID', 'integrate-elementor-mailster' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => __( 'field ID', 'integrate-elementor-mailster' ),
+			]
+		);
+
+		$widget->add_control(
+			'list',
+			[
+				'label'       => __( 'Custom Fields', 'integrate-elementor-mailster' ),
+				'type'        => \Elementor\Controls_Manager::REPEATER,
+				'fields'      => $maislter_repeater->get_controls(),
+				'default'     => [
+					[
+						'list_options' => 'email',
+						'list_form_id' => 'email',
+					],
+				],
+				'title_field' => '{{{ list_options }}}',
+			]
+		);
+
+		$widget->add_control(
+			'important_note',
+			[
+				'label'     => 'NOTE',
+				'type'      => \Elementor\Controls_Manager::RAW_HTML,
+				'separator' => 'before',
+				'raw'       => __( '<small>Maislter\'s <b>Checkbox</b> works like <b>Acceptance</b> field.<br />Mailster\'s <b>Dropdown</b> works like <b>Select</b> field.</small>', 'integrate-elementor-mailster' ),
+			]
+		);
+
 		$widget->end_controls_section();
 	}
 
@@ -127,7 +205,7 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 			return;
 		}
 
-		// Get submitetd Form data
+		// Get submitted Form data
 		$raw_fields = $record->get( 'fields' );
 
 		// Normalize the Form Data
@@ -145,13 +223,14 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 
 		// prepare the $mailster_data from the submitted fields. only the email is required
 		// Based on the param list at https://kb.mailster.co/mailster-for-developers/
-		$mailster_data = [
-			'email'     => $fields['email'],
-			'firstname' => $fields['firstname'],
-			'lastname'  => $fields['lastname'],
-			'ip'        => \ElementorPro\Core\Utils::get_client_ip(),
-			'status'    => $double_opt_in ? 0 : 1,
-		];
+		if ( $settings['list'] ) {
+			foreach ( $settings['list'] as $item ) {
+				$mailster_data[ $item['list_options'] ] = $fields[ $item['list_form_id'] ];
+			}
+		}
+
+		$mailster_data['ip']     = \ElementorPro\Core\Utils::get_client_ip();
+		$mailster_data['status'] = ( $double_opt_in ? 0 : 1 );
 
 		// add a new subscriber and $overwrite it if exists
 		$subscriber_id = mailster( 'subscribers' )->add( $mailster_data, $overwrite );
@@ -160,11 +239,11 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 		if ( ! is_wp_error( $subscriber_id ) ) {
 
 			// your list ids
-			$list_ids = explode( ',', $settings['mailster_list'] );
-			mailster( 'subscribers' )->assign_lists( $subscriber_id, $list_ids );
+			mailster( 'subscribers' )->assign_lists( $subscriber_id, $settings['mailster_list'] );
 
 		} else {
 			// actions if adding fails. $subscriber_id is a WP_Error object
+			return new WP_Error( 'Action failed', $subscriber_id );
 		}
 	}
 
@@ -177,10 +256,12 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 	 */
 	public function on_export( $element ) {
 		unset(
-			$element['mailster_important_note'],
 			$element['mailster_list'],
 			$element['mailster_overwrite'],
-			$element['mailster_opt_in']
+			$element['mailster_opt_in'],
+			$element['mailster_customfield'],
+			$element['mailster_options'],
+			$element['important_note'],
 		);
 	}
 }
