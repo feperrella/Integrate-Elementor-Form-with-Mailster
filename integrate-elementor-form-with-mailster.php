@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       Integrate Elementor Form with Mailster
- * Plugin URI:        https://github.com/feperrella/integrate-elementor-mailster
+ * Plugin URI:        https://github.com/feperrella/Integrate-Elementor-Form-with-Mailster
  * Description:       Adds Mailster as an Action After Submit in Elementor Pro Forms.
  * Author:            Fernando A. Perrella
  * Author URI:        https://www.fapnet.com.br
- * Version:           1.0.0
+ * Version:           1.1.0
  * License:           GPLv3
  * Text Domain:       integrate-elementor-mailster
  * Domain Path:       /languages
@@ -40,6 +40,6 @@ if ( ! defined( 'INTEGRATE_ELEMENTOR_MAILSTER_PATH' ) ) {
 }
 
 // Include the main Integrate Elementor Form with Mailster class.
-if ( ! class_exists( 'Integrate_Elementor_Form_with_Mailster', false ) ) {
+if ( ! class_exists( 'Integrate_Elementor_Form_With_Mailster', false ) ) {
 	include_once dirname( INTEGRATE_ELEMENTOR_MAILSTER_PATH ) . '/includes/class-integrate-elementor-form-with-mailster.php';
 }

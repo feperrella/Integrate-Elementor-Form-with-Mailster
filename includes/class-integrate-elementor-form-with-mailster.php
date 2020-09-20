@@ -4,20 +4,18 @@
  *
  * The main class that initiates and runs the plugin.
  *
- * @package Integrate_Elementor_Form_with_Mailster/Includes/Integrate_Elementor_Form_with_Mailster
+ * @package Integrate_Elementor_Form_With_Mailster/Includes/Integrate_Elementor_Form_With_Mailster
  * @since   1.0.0
- * @version 1.0.0
+ * @version 1.1.0
  */
-final class Integrate_Elementor_Form_with_Mailster {
+final class Integrate_Elementor_Form_With_Mailster {
 
 	/**
 	 * Plugin Version
 	 *
-	 * @since 1.0.0
-	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.1.0';
 
 	/**
 	 * Minimum Elementor Version
@@ -26,7 +24,7 @@ final class Integrate_Elementor_Form_with_Mailster {
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '2.0.0';
+	const MINIMUM_ELEMENTOR_VERSION = '2.9.0';
 
 	/**
 	 * Minimum PHP Version
@@ -45,7 +43,7 @@ final class Integrate_Elementor_Form_with_Mailster {
 	 * @access private
 	 * @static
 	 *
-	 * @var Integrate_Elementor_Form_with_Mailster The single instance of the class.
+	 * @var Integrate_Elementor_Form_With_Mailster The single instance of the class.
 	 */
 	private static $_instance = null;
 
@@ -59,7 +57,7 @@ final class Integrate_Elementor_Form_with_Mailster {
 	 * @access public
 	 * @static
 	 *
-	 * @return Integrate_Elementor_Form_with_Mailster An instance of the class.
+	 * @return Integrate_Elementor_Form_With_Mailster An instance of the class.
 	 */
 	public static function instance() {
 
@@ -266,4 +264,4 @@ final class Integrate_Elementor_Form_with_Mailster {
 
 }
 
-Integrate_Elementor_Form_with_Mailster::instance();
+Integrate_Elementor_Form_With_Mailster::instance();
