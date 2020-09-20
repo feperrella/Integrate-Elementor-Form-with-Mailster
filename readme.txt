@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Requires at least: 4.9  
 Tested up to: 5.5.1
 Requires PHP: 7.0  
-Stable tag: 1.1.0  
+Stable tag: 1.1.1  
 License: GPLv3  
 License URI: https://www.gnu.org/licenses/gpl-3.0.html  
 
@@ -15,11 +15,9 @@ Includes default Mailster fields: Email, First Name, Last Name. Segmented Mailst
 == Description ==
 The Integrate Elementor Form With Mailster is intended as a simple integration for the Elementor Pro Forms to subscribe direclty to Mailster Lists whithout any code.
 
-The available fields are First Name, Last Name and Email, the only field required is the Email field to work and subscribe automatically to Mailster Lists. The only needed action is to update the ID field from the Elementor Form to, respectively, firstname, lastname and email, this way all fields are sincronized.
+Now you can add all custom fields created in Mailster and sincronize through the elementor field ID, take care in changing all ID's to different names. The list selection is better also with Select2 functionality, making it easy to select which lists you want to add the subscriber.
 
 You have the option to Enable/Disable the Double Opt-in (enabled by default), and to Overwrite or not, if the users already exists in the Mailster List.
-
-You can type any number of lists, just separate them with a coma: 1,3,12
 
 = Intended upgrades =
 * Easier list selection
