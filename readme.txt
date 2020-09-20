@@ -3,9 +3,9 @@ Contributors: feperrella
 Tags: mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor  
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url  
 Requires at least: 4.9  
-Tested up to: 5.4.2  
+Tested up to: 5.5.1
 Requires PHP: 7.0  
-Stable tag: 1.0.0  
+Stable tag: 1.1.0  
 License: GPLv3  
 License URI: https://www.gnu.org/licenses/gpl-3.0.html  
 
@@ -42,9 +42,12 @@ The only required field is email for the automatic subscription to Mailster to w
 
 == Screenshots ==
 1. Update the ID Field on the form.
-2. Add the Mailster ID of the desired list.
 
 == Changelog ==
+
+= 1.1.0 - 2020/09/20 =
+- Added better Mailster list selection with Select2 (note: review your list settings).
+- Added Maislter Custom Fields.
 
 = 1.0.0 - 2020/08/11 =
 - First plugin version.
