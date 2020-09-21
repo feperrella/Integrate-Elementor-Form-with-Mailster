@@ -261,7 +261,7 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 			$element['mailster_opt_in'],
 			$element['mailster_customfield'],
 			$element['mailster_options'],
-			$element['important_note'],
+			$element['important_note']
 		);
 	}
 }
