@@ -6,7 +6,7 @@
  *
  * @package Integrate_Elementor_Form_With_Mailster/Includes/Integrate_Elementor_Form_With_Mailster
  * @since   1.0.0
- * @version 1.1.1
+ * @version 1.1.2
  */
 final class Integrate_Elementor_Form_With_Mailster {
 
@@ -15,7 +15,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.1.1';
+	const VERSION = '1.1.2';
 
 	/**
 	 * Minimum Elementor Version
@@ -114,15 +114,21 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 */
 	public function init() {
 
-		// Check if Elementor installed and activated
+		// Check if Elementor is installed and activated
 		if ( ! did_action( 'elementor/loaded' ) ) {
 			add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin1' ] );
 			return;
 		}
 
-		// Check if Mailster installed and activated
-		if ( ! function_exists( 'mailster' ) ) {
+		// Check if Elementor Pro is installed and activated
+		if ( ! is_plugin_active( 'elementor-pro/elementor-pro.php' ) ) {
 			add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin2' ] );
+			return;
+		}
+
+		// Check if Mailster is installed and activated
+		if ( ! function_exists( 'mailster' ) ) {
+			add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin3' ] );
 			return;
 		}
 
@@ -159,6 +165,30 @@ final class Integrate_Elementor_Form_With_Mailster {
 			/* translators: 1: Plugin name 2: Elementor Pro */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'integrate-elementor-mailster' ),
 			'<strong>' . esc_html__( 'Integrate Elementor Form With Mailster', 'integrate-elementor-mailster' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'integrate-elementor-mailster' ) . '</strong>'
+		);
+
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+
+	}
+
+	/**
+	 * Admin notice
+	 *
+	 * Warning when the site doesn't have Elementor Pro installed or activated.
+	 *
+	 * @since 1.1.1
+	 *
+	 * @access public
+	 */
+	public function admin_notice_missing_main_plugin2() {
+
+		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+		$message = sprintf(
+			/* translators: 1: Plugin name 2: Elementor Pro */
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'integrate-elementor-mailster' ),
+			'<strong>' . esc_html__( 'Integrate Elementor Form With Mailster', 'integrate-elementor-mailster' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor Pro', 'integrate-elementor-mailster' ) . '</strong>'
 		);
 
@@ -175,7 +205,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function admin_notice_missing_main_plugin2() {
+	public function admin_notice_missing_main_plugin3() {
 
 		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
 

@@ -1,62 +1,65 @@
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: Integrate Elementor Form with Mailster\n"
-"POT-Creation-Date: 2020-09-20 14:36-0300\n"
-"PO-Revision-Date: 2020-09-20 14:36-0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2020-09-30 18:03-0300\n"
+"PO-Revision-Date: 2020-09-30 18:06-0300\n"
 "Language-Team: \n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: integrate-elementor-form-with-mailster.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: pt_BR\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1: Plugin name 2: Elementor Pro
 #. translators: 1: Plugin name 2: Mailster - Email Newsletter Plugin for WordPress
-#: includes/class-integrate-elementor-form-with-mailster.php:160
-#: includes/class-integrate-elementor-form-with-mailster.php:184
+#: includes/class-integrate-elementor-form-with-mailster.php:166
+#: includes/class-integrate-elementor-form-with-mailster.php:190
+#: includes/class-integrate-elementor-form-with-mailster.php:214
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr "\"%1$s\" requer \"%2$s\" estar instalado e ativado."
 
-#: includes/class-integrate-elementor-form-with-mailster.php:161
-#: includes/class-integrate-elementor-form-with-mailster.php:185
-#: includes/class-integrate-elementor-form-with-mailster.php:209
-#: includes/class-integrate-elementor-form-with-mailster.php:234
+#: includes/class-integrate-elementor-form-with-mailster.php:167
+#: includes/class-integrate-elementor-form-with-mailster.php:191
+#: includes/class-integrate-elementor-form-with-mailster.php:215
+#: includes/class-integrate-elementor-form-with-mailster.php:239
+#: includes/class-integrate-elementor-form-with-mailster.php:264
 msgid "Integrate Elementor Form With Mailster"
-msgstr "Integrar formulário Elementor com Mailster"
+msgstr "Integre Elementor Form com Mailster"
 
-#: includes/class-integrate-elementor-form-with-mailster.php:162
+#: includes/class-integrate-elementor-form-with-mailster.php:168
+#: includes/class-integrate-elementor-form-with-mailster.php:240
+msgid "Elementor"
+msgstr "Elementor"
+
+#: includes/class-integrate-elementor-form-with-mailster.php:192
 msgid "Elementor Pro"
 msgstr "Elementor Pro"
 
-#: includes/class-integrate-elementor-form-with-mailster.php:186
+#: includes/class-integrate-elementor-form-with-mailster.php:216
 msgid "Mailster - Email Newsletter Plugin for WordPress"
 msgstr "Mailster - Email Newsletter Plugin for WordPress"
 
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
-#: includes/class-integrate-elementor-form-with-mailster.php:208
-#: includes/class-integrate-elementor-form-with-mailster.php:233
+#: includes/class-integrate-elementor-form-with-mailster.php:238
+#: includes/class-integrate-elementor-form-with-mailster.php:263
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr "\"%1$s\" requer \"%2$s\" versão %3$s ou superior."
 
-#: includes/class-integrate-elementor-form-with-mailster.php:210
-msgid "Elementor"
-msgstr "Elementor"
-
-#: includes/class-integrate-elementor-form-with-mailster.php:235
+#: includes/class-integrate-elementor-form-with-mailster.php:265
 msgid "PHP"
 msgstr "PHP"
 
@@ -133,9 +136,9 @@ msgid ""
 "<small>Maislter's <b>Checkbox</b> works like <b>Acceptance</b> field.<br /"
 ">Mailster's <b>Dropdown</b> works like <b>Select</b> field.</small>"
 msgstr ""
-"<small>O <b>Checkbox</b> do Mailster funciona como campo <b>de Aceitação.</"
-"b><br />O<b>Botões de Opções</b> do Mailster funciona como o campo <b>Select."
-"</b></small>"
+"<small>O <b>Checkbox</b> do Mailster funciona como campo <b>de Aceitação."
+"</b><br />O<b>Botões de Opções</b> do Mailster funciona como o campo "
+"<b>Select.</b></small>"
 
 #. Plugin Name of the plugin/theme
 msgid "Integrate Elementor Form with Mailster"
@@ -143,12 +146,14 @@ msgstr "Integrar formulário Elementor com Mailster"
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/feperrella/Integrate-Elementor-Form-with-Mailster"
-msgstr "https://github.com/feperrella/Integrate-Elementor-Form-with-Mailster"
+msgstr ""
+"https://github.com/feperrella/Integrate-Elementor-Form-with-Mailster"
 
 #. Description of the plugin/theme
 msgid "Adds Mailster as an Action After Submit in Elementor Pro Forms."
 msgstr ""
-"Adiciona Mailster como uma ação após enviar um Formulário do Elementor Pro."
+"Adiciona Mailster como uma ação após enviar um Formulário do Elementor "
+"Pro."
 
 #. Author of the plugin/theme
 msgid "Fernando A. Perrella"

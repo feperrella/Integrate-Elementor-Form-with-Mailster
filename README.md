@@ -1,13 +1,13 @@
 # Integrate Elementor Form with Mailster #
-**Contributors:** feperrella  
-**Tags:** mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor  
-**Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url  
-**Requires at least:** 4.9  
-**Tested up to:** 5.5.1  
-**Requires PHP:** 7.0  
-**Stable tag:** 1.1.1  
-**License:** GPLv3  
-**License URI:** https://www.gnu.org/licenses/gpl-3.0.html  
+**Contributors:** feperrella
+**Tags:** mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor
+**Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url
+**Requires at least:** 4.9
+**Tested up to:** 5.5.1
+**Requires PHP:** 7.0
+**Stable tag:** 1.1.2
+**License:** GPLv3
+**License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
 Simple Integrate Elementor Form With Mailster.
 Includes default Mailster fields: Email, First Name, Last Name. Segmented Mailster List ID's with comma. Double Opt-in.
@@ -38,6 +38,9 @@ Vale lembrar que apenas o campo email é obrigatório.
 1. Update the ID Field on the form.
 
 ## Changelog ##
+
+### 1.1.2 - 2020/09/30 ###
+- Added compatibility with elementor 2.9 since 3.0 changed core functionalities.
 
 ### 1.1.1 - 2020/09/20 ###
 - Updating the description.

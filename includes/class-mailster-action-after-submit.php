@@ -4,7 +4,7 @@
  *
  * @package Integrate_Elementor_Form_with_Mailster/Includes/Mailster_Action_After_Submit
  * @since   1.0.0
- * @version 1.1.1
+ * @version 1.1.2
  * @see     https://developers.elementor.com/custom-form-action/
  *
  * Custom elementor form action after submit to add a subsciber to
@@ -229,7 +229,13 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 			}
 		}
 
-		$mailster_data['ip']     = \ElementorPro\Core\Utils::get_client_ip();
+		// Check for required Elementor version
+		if ( version_compare( ELEMENTOR_VERSION, '3.0.0', '>=' ) ) {
+			$mailster_data['ip'] = \ElementorPro\Core\Utils::get_client_ip();
+		} else {
+			$mailster_data['ip'] = \ElementorPro\Classes\Utils::get_client_ip();
+		}
+
 		$mailster_data['status'] = ( $double_opt_in ? 0 : 1 );
 
 		// add a new subscriber and $overwrite it if exists

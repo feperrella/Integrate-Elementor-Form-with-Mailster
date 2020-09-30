@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Integrate Elementor Form with Mailster\n"
-"POT-Creation-Date: 2020-09-20 14:37-0300\n"
+"POT-Creation-Date: 2020-09-30 18:03-0300\n"
 "PO-Revision-Date: 2020-08-11 18:50-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -23,40 +23,43 @@ msgstr ""
 
 #. translators: 1: Plugin name 2: Elementor Pro
 #. translators: 1: Plugin name 2: Mailster - Email Newsletter Plugin for WordPress
-#: includes/class-integrate-elementor-form-with-mailster.php:160
-#: includes/class-integrate-elementor-form-with-mailster.php:184
+#: includes/class-integrate-elementor-form-with-mailster.php:166
+#: includes/class-integrate-elementor-form-with-mailster.php:190
+#: includes/class-integrate-elementor-form-with-mailster.php:214
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:161
-#: includes/class-integrate-elementor-form-with-mailster.php:185
-#: includes/class-integrate-elementor-form-with-mailster.php:209
-#: includes/class-integrate-elementor-form-with-mailster.php:234
+#: includes/class-integrate-elementor-form-with-mailster.php:167
+#: includes/class-integrate-elementor-form-with-mailster.php:191
+#: includes/class-integrate-elementor-form-with-mailster.php:215
+#: includes/class-integrate-elementor-form-with-mailster.php:239
+#: includes/class-integrate-elementor-form-with-mailster.php:264
 msgid "Integrate Elementor Form With Mailster"
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:162
+#: includes/class-integrate-elementor-form-with-mailster.php:168
+#: includes/class-integrate-elementor-form-with-mailster.php:240
+msgid "Elementor"
+msgstr ""
+
+#: includes/class-integrate-elementor-form-with-mailster.php:192
 msgid "Elementor Pro"
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:186
+#: includes/class-integrate-elementor-form-with-mailster.php:216
 msgid "Mailster - Email Newsletter Plugin for WordPress"
 msgstr ""
 
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
-#: includes/class-integrate-elementor-form-with-mailster.php:208
-#: includes/class-integrate-elementor-form-with-mailster.php:233
+#: includes/class-integrate-elementor-form-with-mailster.php:238
+#: includes/class-integrate-elementor-form-with-mailster.php:263
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:210
-msgid "Elementor"
-msgstr ""
-
-#: includes/class-integrate-elementor-form-with-mailster.php:235
+#: includes/class-integrate-elementor-form-with-mailster.php:265
 msgid "PHP"
 msgstr ""
 
