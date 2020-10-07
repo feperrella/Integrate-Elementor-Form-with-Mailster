@@ -9,19 +9,15 @@ Stable tag: 1.1.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Simple Integrate Elementor Form With Mailster. 
-Includes default Mailster fields: Email, First Name, Last Name. Segmented Mailster List ID's with comma. Double Opt-in.
+Easiest way to integrate Elementor Pro Forms with Mailster Newsletter.
+Includes: custom fields selection, Mailster list selections, double opt-in and update profile option.
 
 == Description ==
 The Integrate Elementor Form With Mailster is intended as a simple integration for the Elementor Pro Forms to subscribe direclty to Mailster Lists whithout any code.
 
-Now you can add all custom fields created in Mailster and sincronize through the elementor field ID, take care in changing all ID's to different names. The list selection is better also with Select2 functionality, making it easy to select which lists you want to add the subscriber.
+Now you can add all custom fields created in Mailster and sincronize through the elementor form field ID, take care in changing all ID's to different names. The list selection is better with Select2 functionality, making it easy to choose which lists you want to add the subscribers.
 
-You have the option to Enable/Disable the Double Opt-in (enabled by default), and to Overwrite or not, if the users already exists in the Mailster List.
-
-= Intended upgrades =
-* Easier list selection
-* Custom Fields
+You have the option to Enable/Disable the Double Opt-in (enabled by default), and to Overwrite or not, if the users already exists in the Mailster list.
 
 == Installation ==
 Send the plugin files to the folder wp-content/plugins, or install it using WordPress Plugins.
@@ -30,21 +26,26 @@ Activate the plugin.
 == Frequently Asked Questions ==
 
 = What do I need to use this plugin? =
-* Mailster - Email Newsletter Plugin for WordPress
-* Elementor
-* Elementor Pro
+* Mailster - Email Newsletter Plugin for WordPress 2.0 or higher
+* Elementor 2.9 or higher
+* Elementor Pro 2.9 or higher
 
 = How to Setup =
-Just rename the respective field ID's from the Elementor Form to: email, firstname and lastname.
-The only required field is email for the automatic subscription to Mailster to work.
+* Add fields to your form.
+* Update the ID of each field to the names you prefer.
+* Add in Mailster Action.
+* Add Custom Fields as desired inside the Mailster tab.
+* Fill each custom field with the respective Form Field ID named before.
+That's it!
 
 == Screenshots ==
 1. Update the ID Field on the form.
+2. Inside Mailster tab, update the Field ID with the corresponding custom field.
 
 == Changelog ==
 
 = 1.1.3 - 2020/10/07 =
-- Added compatibility with elementor 2.9 since 3.0 changed core functionalities.
+- Fix dependecies check.
 
 = 1.1.2 - 2020/09/30 =
 - Added compatibility with elementor 2.9 since 3.0 changed core functionalities.
