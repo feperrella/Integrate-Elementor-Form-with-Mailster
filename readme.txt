@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Requires at least: 4.9
 Tested up to: 5.5.1
 Requires PHP: 7.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,9 @@ The only required field is email for the automatic subscription to Mailster to w
 1. Update the ID Field on the form.
 
 == Changelog ==
+
+= 1.1.3 - 2020/10/07 =
+- Added compatibility with elementor 2.9 since 3.0 changed core functionalities.
 
 = 1.1.2 - 2020/09/30 =
 - Added compatibility with elementor 2.9 since 3.0 changed core functionalities.

@@ -5,7 +5,7 @@
 **Requires at least:** 4.9
 **Tested up to:** 5.5.1
 **Requires PHP:** 7.0
-**Stable tag:** 1.1.2
+**Stable tag:** 1.1.3
 **License:** GPLv3
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,6 +38,9 @@ Vale lembrar que apenas o campo email é obrigatório.
 1. Update the ID Field on the form.
 
 ## Changelog ##
+
+### 1.1.3 - 2020/10/07 ###
+- Fix dependecies check.
 
 ### 1.1.2 - 2020/09/30 ###
 - Added compatibility with elementor 2.9 since 3.0 changed core functionalities.
