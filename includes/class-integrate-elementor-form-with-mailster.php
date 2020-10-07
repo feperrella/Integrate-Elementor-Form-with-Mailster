@@ -6,7 +6,7 @@
  *
  * @package Integrate_Elementor_Form_With_Mailster/Includes/Integrate_Elementor_Form_With_Mailster
  * @since   1.0.0
- * @version 1.1.2
+ * @version 1.1.3
  */
 final class Integrate_Elementor_Form_With_Mailster {
 
@@ -15,7 +15,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.1.2';
+	const VERSION = '1.1.3';
 
 	/**
 	 * Minimum Elementor Version
@@ -121,7 +121,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 		}
 
 		// Check if Elementor Pro is installed and activated
-		if ( ! is_plugin_active( 'elementor-pro/elementor-pro.php' ) ) {
+		if ( ! in_array( 'elementor-pro/elementor-pro.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin2' ] );
 			return;
 		}
