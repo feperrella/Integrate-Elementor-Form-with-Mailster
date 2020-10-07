@@ -6,7 +6,6 @@
  *
  * @package Integrate_Elementor_Form_With_Mailster/Includes/Integrate_Elementor_Form_With_Mailster
  * @since   1.0.0
- * @version 1.1.3
  */
 final class Integrate_Elementor_Form_With_Mailster {
 

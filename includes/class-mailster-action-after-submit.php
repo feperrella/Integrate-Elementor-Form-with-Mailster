@@ -4,7 +4,6 @@
  *
  * @package Integrate_Elementor_Form_with_Mailster/Includes/Mailster_Action_After_Submit
  * @since   1.0.0
- * @version 1.1.2
  * @see     https://developers.elementor.com/custom-form-action/
  *
  * Custom elementor form action after submit to add a subsciber to
