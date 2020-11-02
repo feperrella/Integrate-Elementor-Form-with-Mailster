@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Integrate Elementor Form with Mailster\n"
-"POT-Creation-Date: 2020-09-30 18:03-0300\n"
+"POT-Creation-Date: 2020-11-02 17:08-0300\n"
 "PO-Revision-Date: 2020-08-11 18:50-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -23,118 +23,132 @@ msgstr ""
 
 #. translators: 1: Plugin name 2: Elementor Pro
 #. translators: 1: Plugin name 2: Mailster - Email Newsletter Plugin for WordPress
-#: includes/class-integrate-elementor-form-with-mailster.php:166
-#: includes/class-integrate-elementor-form-with-mailster.php:190
-#: includes/class-integrate-elementor-form-with-mailster.php:214
+#: includes/class-integrate-elementor-form-with-mailster.php:165
+#: includes/class-integrate-elementor-form-with-mailster.php:189
+#: includes/class-integrate-elementor-form-with-mailster.php:213
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:167
-#: includes/class-integrate-elementor-form-with-mailster.php:191
-#: includes/class-integrate-elementor-form-with-mailster.php:215
-#: includes/class-integrate-elementor-form-with-mailster.php:239
-#: includes/class-integrate-elementor-form-with-mailster.php:264
+#: includes/class-integrate-elementor-form-with-mailster.php:166
+#: includes/class-integrate-elementor-form-with-mailster.php:190
+#: includes/class-integrate-elementor-form-with-mailster.php:214
+#: includes/class-integrate-elementor-form-with-mailster.php:238
+#: includes/class-integrate-elementor-form-with-mailster.php:263
 msgid "Integrate Elementor Form With Mailster"
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:168
-#: includes/class-integrate-elementor-form-with-mailster.php:240
+#: includes/class-integrate-elementor-form-with-mailster.php:167
+#: includes/class-integrate-elementor-form-with-mailster.php:239
 msgid "Elementor"
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:192
+#: includes/class-integrate-elementor-form-with-mailster.php:191
 msgid "Elementor Pro"
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:216
+#: includes/class-integrate-elementor-form-with-mailster.php:215
 msgid "Mailster - Email Newsletter Plugin for WordPress"
 msgstr ""
 
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
-#: includes/class-integrate-elementor-form-with-mailster.php:238
-#: includes/class-integrate-elementor-form-with-mailster.php:263
+#: includes/class-integrate-elementor-form-with-mailster.php:237
+#: includes/class-integrate-elementor-form-with-mailster.php:262
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: includes/class-integrate-elementor-form-with-mailster.php:265
+#: includes/class-integrate-elementor-form-with-mailster.php:264
 msgid "PHP"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:41
-#: includes/class-mailster-action-after-submit.php:56
+#: includes/class-mailster-action-after-submit.php:40
+#: includes/class-mailster-action-after-submit.php:55
 msgid "Mailster"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:66
+#: includes/class-mailster-action-after-submit.php:65
 msgid "Mailster Options"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:82
+#: includes/class-mailster-action-after-submit.php:81
 msgid "Mailster Lists"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:93
+#: includes/class-mailster-action-after-submit.php:92
 msgid "Overwrite"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:94
+#: includes/class-mailster-action-after-submit.php:107
+#: includes/class-mailster-action-after-submit.php:121
+msgid "Yes"
 msgstr ""
 
 #: includes/class-mailster-action-after-submit.php:95
 #: includes/class-mailster-action-after-submit.php:108
-msgid "Yes"
-msgstr ""
-
-#: includes/class-mailster-action-after-submit.php:96
-#: includes/class-mailster-action-after-submit.php:109
+#: includes/class-mailster-action-after-submit.php:122
 msgid "No"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:99
+#: includes/class-mailster-action-after-submit.php:98
 msgid "Overwrite the user with the new information."
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:106
+#: includes/class-mailster-action-after-submit.php:105
 msgid "Double Opt in"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:112
+#: includes/class-mailster-action-after-submit.php:111
 msgid "Enable the confirmation email for the newsletter signup."
 msgstr ""
 
 #: includes/class-mailster-action-after-submit.php:119
+msgid "GDPR Compliance"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:125
+msgid ""
+"Enable GDPR compliance, you need to create an Acceptance Field for the "
+"GDPR information and set the Required option to Yes."
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:133
 msgid "Mailster Custom Fields"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:136
+#: includes/class-mailster-action-after-submit.php:150
 msgid "Email"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:137
+#: includes/class-mailster-action-after-submit.php:151
 msgid "Name"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:138
+#: includes/class-mailster-action-after-submit.php:152
 msgid "Last Name"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:147
-#: includes/class-mailster-action-after-submit.php:165
+#: includes/class-mailster-action-after-submit.php:161
+#: includes/class-mailster-action-after-submit.php:179
 msgid "Custom Fields"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:156
+#: includes/class-mailster-action-after-submit.php:170
 msgid "Field ID"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:158
+#: includes/class-mailster-action-after-submit.php:172
 msgid "field ID"
 msgstr ""
 
-#: includes/class-mailster-action-after-submit.php:184
+#: includes/class-mailster-action-after-submit.php:198
 msgid ""
 "<small>Maislter's <b>Checkbox</b> works like <b>Acceptance</b> field.<br /"
-">Mailster's <b>Dropdown</b> works like <b>Select</b> field.</small>"
+">Mailster's <b>Dropdown</b> works like <b>Select</b> field.<br />Enable "
+"<b>GDPR Compliance</b> in Mailster Privacy tab to show the option in this "
+"screen.</small>"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
