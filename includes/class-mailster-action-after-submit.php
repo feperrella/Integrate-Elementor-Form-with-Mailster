@@ -112,6 +112,21 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 			]
 		);
 
+		if ( mailster_option( 'gdpr_forms' ) ) {
+			$widget->add_control(
+				'mailster_gdpr',
+				[
+					'label'        => __( 'GDPR Compliance', 'integrate-elementor-mailster' ),
+					'type'         => \Elementor\Controls_Manager::SWITCHER,
+					'label_on'     => __( 'Yes', 'integrate-elementor-mailster' ),
+					'label_off'    => __( 'No', 'integrate-elementor-mailster' ),
+					'return_value' => true,
+					'default'      => true,
+					'description'  => __( 'Enable GDPR compliance, you need to create an Acceptance Field for the GDPR information and set the Required option to Yes.', 'integrate-elementor-mailster' ),
+				]
+			);
+		}
+
 		$widget->add_control(
 			'mailster_customfield',
 			[
@@ -180,7 +195,7 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 				'label'     => 'NOTE',
 				'type'      => \Elementor\Controls_Manager::RAW_HTML,
 				'separator' => 'before',
-				'raw'       => __( '<small>Maislter\'s <b>Checkbox</b> works like <b>Acceptance</b> field.<br />Mailster\'s <b>Dropdown</b> works like <b>Select</b> field.</small>', 'integrate-elementor-mailster' ),
+				'raw'       => __( '<small>Maislter\'s <b>Checkbox</b> works like <b>Acceptance</b> field.<br />Mailster\'s <b>Dropdown</b> works like <b>Select</b> field.<br />Enable <b>GDPR Compliance</b> in Mailster Privacy tab to show the option in this screen.</small>', 'integrate-elementor-mailster' ),
 			]
 		);
 
@@ -219,6 +234,11 @@ class Mailster_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\A
 
 		// add with double opt in
 		$double_opt_in = $settings['mailster_opt_in'];
+
+		// add with GDPR Compliance
+		if ( $settings['mailster_gdpr'] ) {
+			$mailster_data['gdpr'] = time();
+		}
 
 		// prepare the $mailster_data from the submitted fields. only the email is required
 		// Based on the param list at https://kb.mailster.co/mailster-for-developers/
