@@ -3,7 +3,7 @@ Contributors: feperrella
 Tags: mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url
 Requires at least: 4.9
-Tested up to: 5.5.1
+Tested up to: 5.7
 Requires PHP: 7.0
 Stable tag: 1.2.0
 License: GPLv3
