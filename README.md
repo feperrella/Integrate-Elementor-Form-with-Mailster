@@ -2,10 +2,10 @@
 **Contributors:** feperrella
 **Tags:** mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor
 **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url
-**Requires at least:** 4.9
-**Tested up to:** 5.7
-**Requires PHP:** 7.0
-**Stable tag:** 1.2.0
+**Requires at least:** 5.5
+**Tested up to:** 6.1.1
+**Requires PHP:** 7.4
+**Stable tag:** 1.2.1
 **License:** GPLv3
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,8 +27,8 @@ Activate the plugin.
 
 ### What do I need to use this plugin? ###
 * Mailster - Email Newsletter Plugin for WordPress 2.0 or higher
-* Elementor 2.9 or higher
-* Elementor Pro 2.9 or higher
+* Elementor 3.0 or higher
+* Elementor Pro 3.0 or higher
 
 ### How to setup the custom fields ###
 * Add fields to your form.
@@ -43,7 +43,8 @@ That's it!
 2. Inside Mailster tab, update the Field ID with the corresponding custom field.
 
 ## Changelog ##
-
+### 1.2.1 - 2023/03/22 ###
+- Compatibility check for PHP 8.1
 ### 1.2.0 - 2020/11/02 ###
 - Added Mailster GDPR option.
 

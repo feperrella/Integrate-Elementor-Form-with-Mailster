@@ -14,7 +14,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.1.3';
+	const VERSION = '1.2.1';
 
 	/**
 	 * Minimum Elementor Version
@@ -23,7 +23,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '2.9.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.0.0';
 
 	/**
 	 * Minimum PHP Version
@@ -32,7 +32,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
-	const MINIMUM_PHP_VERSION = '7.0';
+	const MINIMUM_PHP_VERSION = '7.4';
 
 	/**
 	 * Instance
@@ -158,7 +158,8 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 */
 	public function admin_notice_missing_main_plugin1() {
 
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if ( isset( $_GET['activate'] ) )
+			unset( $_GET['activate'] );
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor Pro */
@@ -182,7 +183,8 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 */
 	public function admin_notice_missing_main_plugin2() {
 
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if ( isset( $_GET['activate'] ) )
+			unset( $_GET['activate'] );
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor Pro */
@@ -206,7 +208,8 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 */
 	public function admin_notice_missing_main_plugin3() {
 
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if ( isset( $_GET['activate'] ) )
+			unset( $_GET['activate'] );
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Mailster - Email Newsletter Plugin for WordPress */
@@ -230,7 +233,8 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 */
 	public function admin_notice_minimum_elementor_version() {
 
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if ( isset( $_GET['activate'] ) )
+			unset( $_GET['activate'] );
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
@@ -255,7 +259,8 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 */
 	public function admin_notice_minimum_php_version() {
 
-		if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+		if ( isset( $_GET['activate'] ) )
+			unset( $_GET['activate'] );
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */

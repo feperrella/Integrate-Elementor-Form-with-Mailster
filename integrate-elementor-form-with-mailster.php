@@ -5,12 +5,12 @@
  * Description:       Adds Mailster as an Action After Submit in Elementor Pro Forms.
  * Author:            Fernando A. Perrella
  * Author URI:        https://www.fapnet.com.br
- * Version:           1.2.0
+ * Version:           1.2.1
  * License:           GPLv3
  * Text Domain:       integrate-elementor-mailster
  * Domain Path:       /languages
- * Requires at least: 4.9
- * Requires PHP:      7.0
+ * Requires at least: 5.5
+ * Requires PHP:      7.4
  *
  * Integrate Elementor Form with Mailster is free software: you can
  * redistribute it and/or modify it under the terms of the
