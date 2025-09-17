@@ -14,7 +14,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.2.1';
+	const VERSION = '1.3.0';
 
 	/**
 	 * Minimum Elementor Version
@@ -23,7 +23,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '3.0.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.5.0';
 
 	/**
 	 * Minimum PHP Version
@@ -32,7 +32,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
-	const MINIMUM_PHP_VERSION = '7.4';
+	const MINIMUM_PHP_VERSION = '8.1';
 
 	/**
 	 * Instance
@@ -42,9 +42,9 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 * @access private
 	 * @static
 	 *
-	 * @var Integrate_Elementor_Form_With_Mailster The single instance of the class.
+	 * @var Integrate_Elementor_Form_With_Mailster|null The single instance of the class.
 	 */
-	private static $_instance = null;
+	private static ?Integrate_Elementor_Form_With_Mailster $_instance = null;
 
 	/**
 	 * Instance
@@ -58,13 +58,11 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @return Integrate_Elementor_Form_With_Mailster An instance of the class.
 	 */
-	public static function instance() {
-
+	public static function instance(): Integrate_Elementor_Form_With_Mailster {
 		if ( is_null( self::$_instance ) ) {
 			self::$_instance = new self();
 		}
 		return self::$_instance;
-
 	}
 
 	/**
@@ -75,10 +73,9 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 * @access public
 	 */
 	public function __construct() {
-
 		add_action( 'init', [ $this, 'i18n' ] );
 		add_action( 'plugins_loaded', [ $this, 'init' ] );
-
+		add_action( 'elementor_pro/forms/fields/register', 'add_new_form_field' );
 	}
 
 	/**
@@ -92,10 +89,8 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function i18n() {
-
+	public function i18n(): void {
 		load_plugin_textdomain( 'integrate-elementor-mailster' );
-
 	}
 
 	/**
@@ -111,8 +106,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function init() {
-
+	public function init(): void {
 		// Check if Elementor is installed and activated
 		if ( ! did_action( 'elementor/loaded' ) ) {
 			add_action( 'admin_notices', [ $this, 'admin_notice_missing_main_plugin1' ] );
@@ -156,10 +150,10 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function admin_notice_missing_main_plugin1() {
-
-		if ( isset( $_GET['activate'] ) )
+	public function admin_notice_missing_main_plugin1(): void {
+		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor Pro */
@@ -169,7 +163,6 @@ final class Integrate_Elementor_Form_With_Mailster {
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 	}
 
 	/**
@@ -181,10 +174,10 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function admin_notice_missing_main_plugin2() {
-
-		if ( isset( $_GET['activate'] ) )
+	public function admin_notice_missing_main_plugin2(): void {
+		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor Pro */
@@ -194,7 +187,6 @@ final class Integrate_Elementor_Form_With_Mailster {
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 	}
 
 	/**
@@ -206,10 +198,10 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function admin_notice_missing_main_plugin3() {
-
-		if ( isset( $_GET['activate'] ) )
+	public function admin_notice_missing_main_plugin3(): void {
+		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Mailster - Email Newsletter Plugin for WordPress */
@@ -219,7 +211,6 @@ final class Integrate_Elementor_Form_With_Mailster {
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 	}
 
 	/**
@@ -231,10 +222,10 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function admin_notice_minimum_elementor_version() {
-
-		if ( isset( $_GET['activate'] ) )
+	public function admin_notice_minimum_elementor_version(): void {
+		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
@@ -245,7 +236,6 @@ final class Integrate_Elementor_Form_With_Mailster {
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 	}
 
 	/**
@@ -257,10 +247,10 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function admin_notice_minimum_php_version() {
-
-		if ( isset( $_GET['activate'] ) )
+	public function admin_notice_minimum_php_version(): void {
+		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
+		}
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
@@ -271,7 +261,6 @@ final class Integrate_Elementor_Form_With_Mailster {
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 	}
 
 	/**
@@ -283,8 +272,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @access public
 	 */
-	public function init_mailster_action() {
-
+	public function init_mailster_action(): void {
 		// Include Extension files
 		require_once dirname( INTEGRATE_ELEMENTOR_MAILSTER_PATH ) . '/includes/class-mailster-action-after-submit.php';
 
@@ -293,9 +281,21 @@ final class Integrate_Elementor_Form_With_Mailster {
 
 		// Register the action with form widget
 		\ElementorPro\Plugin::instance()->modules_manager->get_modules( 'forms' )->add_form_action( $mailster_action->get_name(), $mailster_action );
-
 	}
 
+}
+
+/**
+ * Add new `mailster-user-lists` field to Elementor form widget.
+ *
+ * @since 1.0.0
+ * @param \ElementorPro\Modules\Forms\Registrars\Form_Fields_Registrar $form_fields_registrar
+ * @return void
+ */
+function add_new_form_field( $form_fields_registrar ): void {
+	require_once( dirname( INTEGRATE_ELEMENTOR_MAILSTER_PATH ) . '/includes/class-elementor-mailster-field.php' );
+
+	$form_fields_registrar->register( new \Elementor_Mailster_Lists() );
 }
 
 Integrate_Elementor_Form_With_Mailster::instance();

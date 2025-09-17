@@ -1,6 +1,107 @@
-.vscode/*
+# WordPress development
+wp-admin/
+wp-includes/
+wp-content/plugins/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/advanced-cache.php
+wp-content/backups-*
+wp-content/backup-db/
+wp-content/backup-*
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/dashboard/
+wp-content/debug.log
+wp-content/plugins/hello.php
+wp-content/upgrade/
+wp-config.php
+index.php
+license.txt
+readme.html
+xmlrpc.php
+wp-*.php
+favicon.ico
+
+# Ignore other WordPress themes
+wp-content/themes/*
+# But keep our theme
+!wp-content/themes/theodora-home/
+
+# Node.js and build dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Vite specific
+.vite/
+dist/
+*.local
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Environment files
+.env
+.env.*
+!.env.example
 .history/
-.DS_Store
-**/.DS_Store
 .csv
 **/*.icloud
+
+# Editor directories and files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Build process artifacts
+/build/
+/coverage/
+/.nyc_output/
+/reports/
+/.eslintcache
+/tsconfig.tsbuildinfo
+
+# Lock files (uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*.log
+
+# WordPress root files if developing locally
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Composer
+/vendor/
+composer.lock
+
+# Operating system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

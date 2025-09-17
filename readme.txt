@@ -2,10 +2,10 @@
 Contributors: feperrella
 Tags: mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url
-Requires at least: 5.5
-Tested up to: 6.1.1
-Requires PHP: 7.4
-Stable tag: 1.2.1
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.1
+Stable tag: 1.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,8 +27,9 @@ Activate the plugin.
 
 = What do I need to use this plugin? =
 * Mailster - Email Newsletter Plugin for WordPress 2.0 or higher
-* Elementor 3.0 or higher
-* Elementor Pro 3.0 or higher
+* Elementor 3.5.0 or higher
+* Elementor Pro 3.5.0 or higher
+* PHP 8.1 or higher
 
 = How to Setup =
 * Add fields to your form.
@@ -44,8 +45,21 @@ That's it!
 
 == Changelog ==
 
+= 1.3.0 - 2024/12/17 =
+- Updated minimum PHP requirement to 8.1
+- Updated minimum WordPress requirement to 6.0
+- Updated minimum Elementor requirement to 3.5.0
+- Added PHP 8.4 compatibility with proper type declarations
+- Improved code security with better input sanitization
+- Enhanced error handling and validation
+- Updated Elementor Pro API usage for latest compatibility
+- Improved JavaScript for modern WordPress/jQuery compatibility
+- Added responsive CSS styling
+- Fixed deprecated function usage
+- Better GDPR compliance handling
+
 = 1.2.1 - 2023/03/22 =
-- ACompatibility check for PHP 8.1
+- Compatibility check for PHP 8.1
 
 = 1.2.0 - 2020/11/02 =
 - Added Mailster GDPR option.
