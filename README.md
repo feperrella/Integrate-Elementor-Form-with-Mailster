@@ -5,19 +5,33 @@
 **Requires at least:** 6.0
 **Tested up to:** 6.7
 **Requires PHP:** 8.1
-**Stable tag:** 1.3.0
+**Stable tag:** 1.6.0
 **License:** GPLv3
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
 Easiest way to integrate Elementor Pro Forms with Mailster Newsletter.
-Includes: custom fields selection, Mailster list selections, double opt-in and update profile option.
+Includes: custom fields selection, Mailster list selections, double opt-in, update profile option, user-selectable mailing lists, dynamic list management, and intelligent GDPR compliance.
 
 ## Description ##
-The Integrate Elementor Form With Mailster is intended as a simple integration for the Elementor Pro Forms to subscribe direclty to Mailster Lists whithout any code.
+The Integrate Elementor Form With Mailster is a powerful, no-code integration solution for connecting Elementor Pro Forms directly with Mailster Newsletter lists.
 
-Now you can add all custom fields created in Mailster and sincronize through the elementor form field ID, take care in changing all ID's to different names. The list selection is better with Select2 functionality, making it easy to choose which lists you want to add the subscribers.
+### 🚀 Key Features
+* **Dynamic List Management** - Users can subscribe/unsubscribe from multiple lists in a single form submission
+* **Smart Subscriber Detection** - Automatically detects existing subscribers and shows their current subscriptions
+* **Intelligent List Processing** - Combines admin-selected defaults with user preferences seamlessly
+* **Custom Field Mapping** - Map any Elementor form field to Mailster custom fields
+* **GDPR Compliance** - Built-in timestamp tracking for consent management
+* **Double Opt-in Support** - Full control over confirmation requirements
+* **Overwrite Protection** - Choose whether to update existing subscriber data
+* **Real-time Preview** - See exactly what users will experience in the Elementor editor
+* **Multi-language Support** - Includes Portuguese (pt_BR) translations
 
-You have the option to Enable/Disable the Double Opt-in (enabled by default), and to Overwrite or not, if the users already exists in the Mailster list.
+### ⚡ Advanced Capabilities
+* Existing subscribers can manage their list subscriptions directly from your forms
+* Visual indicators show current subscription status with "Current" badges
+* Automatic form reset after successful submissions for better UX
+* Comprehensive error handling and debugging features
+* Backward compatible with all existing forms
 
 ## Installation ##
 Send the plugin files to the folder wp-content/plugins, or install it using WordPress Plugins.
@@ -31,19 +45,48 @@ Activate the plugin.
 * Elementor Pro 3.5.0 or higher
 * PHP 8.1 or higher
 
-### How to setup the custom fields ###
-* Add fields to your form.
-* Update the ID of each field to the names you prefer.
-* Add in Mailster Action.
-* Add Custom Fields as desired inside the Mailster tab.
-* Fill each custom field with the respective Form Field ID named before.
-That's it!
+### How to Setup ###
+
+#### Basic Setup
+1. Add form fields (email, name, etc.) to your Elementor form
+2. Update each field's ID to meaningful names
+3. Add "Mailster" action in the form's Actions After Submit
+4. Configure default lists in the Mailster action settings
+5. Map custom fields in the Custom Fields section
+
+#### Advanced Features
+* **User List Selection**: Enable "Allow User List Selection" and add a "Mailster Lists" field to let users choose their subscriptions
+* **GDPR Compliance**: Add an Acceptance field and map it to "GDPR Consent" for automatic timestamp tracking
+* **Existing Subscribers**: Users with existing accounts will see their current subscriptions automatically checked
+* **Dynamic Management**: Users can add/remove list subscriptions in real-time
+
+#### Pro Tips
+* Use the "Lists Available for User Selection" to control which lists users can choose from
+* Enable "Show List Descriptions" to provide context for each mailing list
+* Test with existing subscriber emails to see the dynamic subscription management in action
 
 ## Screenshots ##
 1. Rename the Field ID in the form with the desired name.
 2. Inside Mailster tab, update the Field ID with the corresponding custom field.
 
 ## Changelog ##
+
+### 1.6.0 - 2025/09/18 ###
+- **MAJOR**: Dynamic subscription management for existing subscribers
+- **NEW**: Real-time subscriber detection and current subscription display
+- **NEW**: Visual "Current" badges for existing subscriptions
+- **NEW**: Add/remove list subscriptions in single form submission
+- **NEW**: Automatic form reset after successful submissions
+- **IMPROVED**: GDPR compliance with proper timestamp tracking
+- **IMPROVED**: Enhanced field mapping with smart checkbox handling
+- **IMPROVED**: Better error handling and debugging capabilities
+- **IMPROVED**: Cleaner UI without unnecessary status windows
+- **FIXED**: All settings persistence issues (Overwrite, Double Opt-in)
+- **FIXED**: List confirmation status consistency
+- **FIXED**: PHP type conversion errors and fatal errors
+- **ENHANCED**: Complete Portuguese (pt_BR) translations
+- **ENHANCED**: Comprehensive code cleanup and optimization
+
 ### 1.3.0 - 2024/12/17 ###
 - Updated minimum PHP requirement to 8.1
 - Updated minimum WordPress requirement to 6.0
