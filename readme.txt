@@ -1,6 +1,6 @@
 === Integrate Elementor Form With Mailster ===
 Contributors: feperrella
-Tags: mailster,elementor,elementor pro,mailster form,elementor form,integrate mailster, integrate elementor
+Tags: mailster,elementor,elementor pro,newsletter,forms
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XGX23QXPNKDPL&source=url
 Requires at least: 6.0
 Tested up to: 6.7
@@ -9,8 +9,7 @@ Stable tag: 1.6.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Easiest way to integrate Elementor Pro Forms with Mailster Newsletter.
-Includes: custom fields selection, Mailster list selections, double opt-in, update profile option, user-selectable mailing lists, dynamic list management, and intelligent GDPR compliance.
+Easiest way to integrate Elementor Pro Forms with Mailster Newsletter. Includes custom fields, list selection, and GDPR compliance.
 
 == Description ==
 The Integrate Elementor Form With Mailster is a powerful, no-code integration solution for connecting Elementor Pro Forms directly with Mailster Newsletter lists.
