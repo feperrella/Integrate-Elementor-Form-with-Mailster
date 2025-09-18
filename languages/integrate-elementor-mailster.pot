@@ -170,3 +170,19 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://www.fapnet.com.br"
 msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:185
+msgid "GDPR Consent"
+msgstr ""
+
+#: includes/class-mailster-action-after-submit.php:231
+msgid "<small>Mailster's <b>Checkbox</b> works like <b>Acceptance</b> field.<br />Mailster's <b>Dropdown</b> works like <b>Select</b> field.<br />For <b>GDPR compliance</b>: Add an Acceptance field to your form, then map it to \"GDPR Consent\" in the Custom Fields section above. This will store a timestamp when consent is given.</small>"
+msgstr ""
+
+#: includes/class-elementor-mailster-field.php:38
+msgid "Mailster Lists"
+msgstr ""
+
+#: includes/class-elementor-mailster-field.php:229
+msgid "No mailing lists available for selection."
+msgstr ""

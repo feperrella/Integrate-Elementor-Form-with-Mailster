@@ -14,7 +14,7 @@ final class Integrate_Elementor_Form_With_Mailster {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.3.0';
+	const VERSION = '1.5.1';
 
 	/**
 	 * Minimum Elementor Version
@@ -139,6 +139,10 @@ final class Integrate_Elementor_Form_With_Mailster {
 
 		// Add Plugin actions
 		add_action( 'elementor_pro/init', [ $this, 'init_mailster_action' ] );
+		
+		// Add AJAX handlers for subscriber list management
+		add_action( 'wp_ajax_get_mailster_subscriber_lists', [ $this, 'ajax_get_subscriber_lists' ] );
+		add_action( 'wp_ajax_nopriv_get_mailster_subscriber_lists', [ $this, 'ajax_get_subscriber_lists' ] );
 	}
 
 	/**
@@ -281,6 +285,80 @@ final class Integrate_Elementor_Form_With_Mailster {
 
 		// Register the action with form widget
 		\ElementorPro\Plugin::instance()->modules_manager->get_modules( 'forms' )->add_form_action( $mailster_action->get_name(), $mailster_action );
+	}
+
+	/**
+	 * AJAX handler to get subscriber lists by email
+	 *
+	 * @since 1.5.1
+	 * @access public
+	 */
+	public function ajax_get_subscriber_lists(): void {
+		// Verify nonce for security
+		if ( ! wp_verify_nonce( $_POST['nonce'] ?? '', 'mailster_subscriber_lists' ) ) {
+			wp_die( 'Security check failed' );
+		}
+
+		$email = sanitize_email( $_POST['email'] ?? '' );
+		
+		if ( ! is_email( $email ) ) {
+			wp_send_json_error( array( 'message' => 'Invalid email address' ) );
+		}
+
+		// Check if Mailster is available
+		if ( ! function_exists( 'mailster' ) ) {
+			wp_send_json_error( array( 'message' => 'Mailster plugin not available' ) );
+		}
+
+		// Get subscriber by email
+		$subscriber = mailster( 'subscribers' )->get_by_mail( $email );
+		
+		if ( ! $subscriber ) {
+			wp_send_json_success( array( 
+				'subscriber_exists' => false,
+				'current_lists' => array(),
+				'subscriber_data' => null
+			) );
+		}
+
+		// Get subscriber's current lists (IDs only)
+		$current_lists = mailster( 'subscribers' )->get_lists( $subscriber->ID, true );
+		$all_lists = mailster( 'lists' )->get();
+		
+		// Format the response data
+		$response_data = array(
+			'subscriber_exists' => true,
+			'subscriber_data' => array(
+				'id' => $subscriber->ID,
+				'email' => $subscriber->email,
+				'firstname' => $subscriber->firstname ?? '',
+				'lastname' => $subscriber->lastname ?? '',
+				'status' => $subscriber->status
+			),
+			'current_lists' => $current_lists,
+			'all_lists' => array()
+		);
+
+		// Add all available lists with their details
+		foreach ( $all_lists as $list ) {
+			$response_data['all_lists'][] = array(
+				'ID' => intval( $list->ID ),
+				'name' => $list->name,
+				'description' => $list->description ?? '',
+				'is_subscribed' => in_array( intval( $list->ID ), $current_lists, true )
+			);
+		}
+
+		// Add debug information
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			$response_data['debug'] = array(
+				'current_lists' => $current_lists,
+				'subscriber_id' => $subscriber->ID,
+				'all_lists_count' => count( $all_lists )
+			);
+		}
+
+		wp_send_json_success( $response_data );
 	}
 
 }

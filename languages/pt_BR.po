@@ -156,9 +156,7 @@ msgid ""
 "<b>GDPR Compliance</b> in Mailster Privacy tab to show the option in this "
 "screen.</small>"
 msgstr ""
-"<small>O <b>Checkbox</b> do Mailster funciona como campo <b>de Aceitação.</"
-"b><br />O<b>Botões de Opções</b> do Mailster funciona como o campo <b>Select."
-"</b></small>"
+"<small>O <b>Checkbox</b> do Mailster funciona como campo de <b>Aceitação</b>.<br />O <b>Dropdown</b> do Mailster funciona como campo <b>Select</b>.<br />Habilite <b>Conformidade GDPR</b> na aba Privacidade do Mailster para mostrar a opção nesta tela.</small>"
 
 #. Plugin Name of the plugin/theme
 msgid "Integrate Elementor Form with Mailster"
@@ -180,3 +178,19 @@ msgstr "Fernando A. Perrella"
 #. Author URI of the plugin/theme
 msgid "https://www.fapnet.com.br"
 msgstr "https://www.fapnet.com.br"
+
+#: includes/class-mailster-action-after-submit.php:185
+msgid "GDPR Consent"
+msgstr "Consentimento GDPR"
+
+#: includes/class-mailster-action-after-submit.php:231
+msgid "<small>Mailster's <b>Checkbox</b> works like <b>Acceptance</b> field.<br />Mailster's <b>Dropdown</b> works like <b>Select</b> field.<br />For <b>GDPR compliance</b>: Add an Acceptance field to your form, then map it to \"GDPR Consent\" in the Custom Fields section above. This will store a timestamp when consent is given.</small>"
+msgstr "<small>O <b>Checkbox</b> do Mailster funciona como campo de <b>Aceitação</b>.<br />O <b>Dropdown</b> do Mailster funciona como campo <b>Select</b>.<br />Para <b>conformidade GDPR</b>: Adicione um campo de Aceitação ao seu formulário, depois mapeie para \"Consentimento GDPR\" na seção Campos Personalizados acima. Isso armazenará um timestamp quando o consentimento for dado.</small>"
+
+#: includes/class-elementor-mailster-field.php:38
+msgid "Mailster Lists"
+msgstr "Listas do Mailster"
+
+#: includes/class-elementor-mailster-field.php:229
+msgid "No mailing lists available for selection."
+msgstr "Nenhuma lista de mailing disponível para seleção."

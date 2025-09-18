@@ -5,12 +5,12 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 8.1
-Stable tag: 1.3.0
+Stable tag: 1.5.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Easiest way to integrate Elementor Pro Forms with Mailster Newsletter.
-Includes: custom fields selection, Mailster list selections, double opt-in and update profile option.
+Includes: custom fields selection, Mailster list selections, double opt-in, update profile option, and user-selectable mailing lists.
 
 == Description ==
 The Integrate Elementor Form With Mailster is intended as a simple integration for the Elementor Pro Forms to subscribe direclty to Mailster Lists whithout any code.
@@ -37,6 +37,8 @@ Activate the plugin.
 * Add in Mailster Action.
 * Add Custom Fields as desired inside the Mailster tab.
 * Fill each custom field with the respective Form Field ID named before.
+* **NEW**: Optionally enable "Allow User List Selection" to let users choose their mailing lists.
+* **NEW**: Add "Mailster Lists" field to your form if you want users to select lists.
 That's it!
 
 == Screenshots ==
@@ -44,6 +46,36 @@ That's it!
 2. Inside Mailster tab, update the Field ID with the corresponding custom field.
 
 == Changelog ==
+
+= 1.5.1 - 2024/12/17 =
+- **CRITICAL FIX**: Fixed form submission not capturing user-selected lists
+- **FIXED**: Corrected HTML field naming to properly submit checkbox values
+- **FIXED**: Updated form processing logic to correctly identify and process user selections
+- **FIXED**: Show/hide descriptions toggle now works properly in editor preview
+- **IMPROVED**: Enhanced debugging capabilities for troubleshooting form submissions
+
+= 1.5.0 - 2024/12/17 =
+- **MAJOR IMPROVEMENT**: Simplified user list selection system for better UX
+- **NEW**: "Lists Available for User Selection" - dedicated multi-select field for admin to choose exactly which lists users can select
+- **NEW**: Live editor preview - Elementor editor now shows real-time preview of what users will see based on admin settings
+- **SIMPLIFIED**: Removed complex selection modes - now always uses simple "add to defaults" behavior
+- **SIMPLIFIED**: Removed confusing "Available Lists for Users" dropdown
+- **IMPROVED**: Much cleaner admin interface with intuitive controls
+- **IMPROVED**: Better form processing logic with enhanced security validation
+- **IMPROVED**: More informative editor messages when user selection is disabled or misconfigured
+- **PERFORMANCE**: Reduced code complexity and improved execution efficiency
+
+= 1.4.0 - 2024/12/17 =
+- **NEW**: Added user-selectable mailing lists feature
+- **NEW**: Frontend form field for users to choose their preferred mailing lists
+- **NEW**: Admin control for enabling/disabling user list selection
+- **NEW**: Three selection modes: Add to defaults, Replace defaults, or Use as fallback
+- **NEW**: Option to show all lists or only admin-selected lists to users
+- **NEW**: Enhanced list descriptions display with improved styling
+- **NEW**: Responsive design for list selection field
+- **IMPROVED**: Better integration between admin defaults and user selections
+- **IMPROVED**: Enhanced CSS styling for better user experience
+- **IMPROVED**: Backward compatibility maintained for existing forms
 
 = 1.3.0 - 2024/12/17 =
 - Updated minimum PHP requirement to 8.1
